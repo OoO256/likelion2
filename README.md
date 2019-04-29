@@ -3,4 +3,4 @@
 @서강대학교 멋쟁이 사자처럼
 
 
-![./screenshot.png]
+![스크린샷](./screenshot.png)
