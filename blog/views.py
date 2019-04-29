@@ -46,8 +46,8 @@ def post_detail(request, index):
     
     
 def delete(request, index):
-    print(index)
-    posts = Post.objects.all
+    # print(index)
+    # posts = Post.objects.all
     
     post = get_object_or_404(Post, pk=index)
     print(post.title)

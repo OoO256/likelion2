@@ -5,7 +5,6 @@
 <h1> post edit </h1>
 <form method="POST" class="post-form" >{% csrf_token %}
     {{ form.as_p }}
-    {% endfor %}
     <button type="submit" class"save btn btn-default">Save</button>
 </form>
 
