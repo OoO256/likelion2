@@ -1,0 +1,15 @@
+<div class="post" >
+    {% if post.pub_date %}
+    <div class="date">
+        {{ post.pub_date }}
+    </div>
+    {% endif %}
+    <h1>{{post.title}}</h1>
+    <p> 카테고리:{{post.category }}</p>
+    <p> {{ post.body|linebreaksbr }}</p>
+
+    <a href="{% url 'edit' index=post.pk %}">수정하기</a>
+    
+    <hr>
+    <a href="{% url 'home' %}">홈으로</a>
+</div>
