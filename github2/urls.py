@@ -21,7 +21,7 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name="home"),
     url(r'^new/$', views.new, name="new"),
-    url(r'^post/(?P<index>d+)/$', views.post_detail, name = 'post_detail'),
+    url(r'^post/(?P<index>\d+)/', views.post_detail, name = 'post_detail'),
     url(r'^post/(?P<index>\d+)/edit/$', views.edit, name='edit'),
     url(r'^post/(?P<pk>\d+)/remove/$', views.delete, name='delete'),
 ]

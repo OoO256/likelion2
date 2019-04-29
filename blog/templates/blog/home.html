@@ -1,9 +1,41 @@
+{% extends 'blog/base.html' %}
+{% load static %}
+{% block content %}
+
 <body>
-<h1>hihi</h1>
-{% for post in post_list %}
-{{ post.pub_date }}
-<h5><a href="{% url 'post_detail' index=post.pk %}">{{post.title}}</a></h5>
-{{post.body | linebreaks }}
-{% endfor %}
+
+
+<h2>
+    깃허-브
+</h2>  <div class='container'>
+    <div class='row'>
+      {% for post in post_list %}
+      <div class='col-lg-4 col-sm-6'>
+        
+        <div class="card text-center">
+        {% if post.image %}
+
+          <img src="{{ post.image.url }}" class="card-img-top" alt="">
+        {% else %}
+          <img src="{%  static 'blog/images/janggoo.JPG' %}" class="card-img-top" alt="">
+        {% endif %}
+         
+          <div class="card-body">
+            <h5 class="card-title"><a href="{% url 'post_detail' index=post.pk %}">{{post.title}}</a></h5>
+            <p class="card-text">
+            {{ post.pub_date}}
+            {{post.body|linebreaks}}
+            </p>
+            <a href="#" class="btn btn-warning text-white">{{post.writer}}</a>
+         </div>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+
+
     
 </body>
+
+{% endblock %}

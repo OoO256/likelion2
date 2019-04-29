@@ -1,0 +1,6 @@
+<h1>hihi</h1>
+{% for post in post_list %}
+{{ post.pub_date }}
+<h5><a href="{% url 'post_detail' index=post.pk %}">{{post.title}}</a></h5>
+{{post.body | linebreaks }}
+{% endfor %}
