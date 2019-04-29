@@ -6,7 +6,7 @@
 
 
 <h2>
-    깃허-브
+    <center>깃허-브</center>
 </h2>  <div class='container'>
     <div class='row'>
       {% for post in post_list %}
@@ -17,7 +17,7 @@
 
           <img src="{{ post.image.url }}" class="card-img-top" alt="">
         {% else %}
-          <img src="{%  static 'blog/images/janggoo.JPG' %}" class="card-img-top" alt="">
+          <img src="{%  static 'blog/images/IMG_2064.JPG' %}" class="card-img-top" alt="">
         {% endif %}
          
           <div class="card-body">
@@ -26,7 +26,6 @@
             {{ post.pub_date}}
             {{post.body|linebreaks}}
             </p>
-            <a href="#" class="btn btn-warning text-white">{{post.writer}}</a>
          </div>
         </div>
       </div>

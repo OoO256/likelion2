@@ -17,6 +17,10 @@ Including another URLconf
 from django.conf.urls import url
 from django.contrib import admin
 from blog import views
+
+from django.conf import settings
+from django.conf.urls.static import static
+
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home, name="home"),
@@ -25,3 +29,7 @@ urlpatterns = [
     url(r'^post/(?P<index>\d+)/edit/$', views.edit, name='edit'),
     url(r'^post/(?P<pk>\d+)/remove/$', views.delete, name='delete'),
 ]
+urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
+
+
+
