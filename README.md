@@ -4,3 +4,9 @@
 
 
 ![스크린샷](./screenshot.PNG)
+
+
+# contributors
+
+@Jiyeon981225
+@OoO256
