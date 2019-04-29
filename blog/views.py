@@ -38,14 +38,18 @@ def edit(request, index):
         form = PostForm(instance = post)
     return render(request, 'blog/edit.html', {'post' : post, 'form' : form})
 
-def post_detail(request,index):
-    post= get_object_or_404(Post, pk=index)
+def post_detail(request, index):
+    post = get_object_or_404(Post, pk=index)
+    print(post.title)
+    print(post.pk)
     return render(request, 'blog/detail.html', {'post':post})
     
     
 def delete(request, index):
-    #posts = Post.objects.all
+    print(index)
+    posts = Post.objects.all
     
     post = get_object_or_404(Post, pk=index)
+    print(post.title)
     post.delete()
     return redirect('home')

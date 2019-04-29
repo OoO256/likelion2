@@ -14,7 +14,7 @@
     <p> {{ post.body|linebreaksbr }}</p>
 
     <a href="{% url 'edit' index=post.pk %}">수정하기</a>
-    <a href="{% url 'delete' pk=post.pk %}">삭제</a>
+    <a href="{% url 'delete' index=post.pk %}">삭제</a>
     <hr>
     <a href="{% url 'home' %}">홈으로</a>
 </div>
